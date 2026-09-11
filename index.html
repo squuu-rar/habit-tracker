@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">✦ <span>Habit Tracker</span></h1>
+                <p class="subtitle">Отслеживай привычки, достигай целей</p>
+            </div>
+        </header>
+
+        <!-- Progress Section -->
+        <section class="progress-section glass">
+            <div class="progress-header">
+                <span class="progress-label">Общий прогресс</span>
+                <span class="progress-percentage" id="progressPercentage">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="completedCount">0</span>
+                    <span class="stat-label">выполнено</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="totalCount">0</span>
+                    <span class="stat-label">всего</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="streakValue">0</span>
+                    <span class="stat-label">дней подряд</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Habit Section -->
+        <section class="add-section glass">
+            <div class="add-form">
+                <input 
+                    type="text" 
+                    id="habitInput" 
+                    class="habit-input" 
+                    placeholder="Введите новую привычку..."
+                    maxlength="50"
+                    autocomplete="off"
+                >
+                <div class="color-picker">
+                    <button class="color-btn" data-color="neon-blue" style="background: #00d4ff;" title="Синий"></button>
+                    <button class="color-btn" data-color="neon-green" style="background: #00ff88;" title="Зелёный"></button>
+                    <button class="color-btn" data-color="neon-purple" style="background: #a855f7;" title="Фиолетовый"></button>
+                    <button class="color-btn" data-color="neon-pink" style="background: #ff6bd6;" title="Розовый"></button>
+                    <button class="color-btn" data-color="neon-orange" style="background: #ff9f43;" title="Оранжевый"></button>
+                </div>
+                <button id="addBtn" class="add-btn">
+                    <span class="btn-icon">+</span>
+                    <span class="btn-text">Добавить</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Habits List -->
+        <section class="habits-section glass">
+            <div class="habits-header">
+                <h2 class="habits-title">Мои привычки</h2>
+                <button id="clearCompletedBtn" class="clear-btn">Очистить выполненные</button>
+            </div>
+            <ul id="habitsList" class="habits-list">
+                <li class="empty-state">
+                    <div class="empty-icon">🎯</div>
+                    <p>Добавьте первую привычку!</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Создано с ❤️ | Habit Tracker</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
